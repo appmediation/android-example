@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.interstitialButton).setOnClickListener(this);
         findViewById(R.id.rewardedVideoButton).setOnClickListener(this);
+        findViewById(R.id.showBannerButton).setOnClickListener(this);
+        findViewById(R.id.hideBannerButton).setOnClickListener(this);
 
         setNewBannerListener();
         setNewInterstitialListener();
