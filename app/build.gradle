@@ -34,10 +34,10 @@ repositories {
         dirs 'libs'
     }
     maven {
-        url  'https://chartboostmobile.bintray.com/Chartboost'
+        url 'https://chartboostmobile.bintray.com/Chartboost'
     }
     maven {
-        url  'https://jitpack.io'
+        url 'https://jitpack.io'
     }
 }
 
@@ -53,6 +53,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.appmediation:am-android-sdk:1.4.0'
+    implementation 'com.appmediation:am-android-sdk:1.4.1'
     compile 'com.android.support:multidex:1.0.2'
 }
