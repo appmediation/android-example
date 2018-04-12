@@ -1,5 +1,11 @@
 # Keep all classes in appmediation package
 -keep class com.appmediation.sdk.** { *; }
+-dontwarn com.appmediation.sdk.**
+
+
+
+###########Chartboost
+-keep class com.chartboost.** { *; }
 
 
 
@@ -96,11 +102,6 @@ public static final ** CREATOR;
 
 
 
-###########Chartboost
--keep class com.chartboost.** { *; }
-
-
-
 
 ########### Vungle
 -dontwarn com.vungle.**
@@ -121,9 +122,9 @@ public static final ** CREATOR;
 -keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
  rx.internal.util.atomic.LinkedQueueNode consumerNode;
 }
--keep class rx.schedulers.Schedulers { public static <methods>; }
--keep class rx.schedulers.ImmediateScheduler { public <methods>; }
--keep class rx.schedulers.TestScheduler { public <methods>; }
+-keep class rx.schedulers.Schedulers { public static *; }
+-keep class rx.schedulers.ImmediateScheduler { public *; }
+-keep class rx.schedulers.TestScheduler { public *; }
 -keep class rx.schedulers.Schedulers { public static ** test(); }
 # MOAT
 -dontwarn com.moat.**
@@ -132,11 +133,7 @@ public static final ** CREATOR;
 -dontwarn okio.**
 -dontwarn retrofit2.Platform$Java8
 
-
-
-
 ########### Ogury
-# PRESAGE - start
 -dontnote io.presage.**
 -dontwarn shared_presage.**
 -dontwarn org.codehaus.**
@@ -151,7 +148,10 @@ public static final ** CREATOR;
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
 }
-# OKHTTP
+# ---- MOAT
+-keep class com.moat.** { *; }
+-dontwarn com.moat.**
+# ---- OKHTTP
 -dontnote okhttp3.**
 -dontnote okio.**
 -dontwarn okhttp3.**
@@ -164,7 +164,7 @@ public static final ** CREATOR;
 -dontnote org.apache.http.**
 -dontwarn org.apache.commons.collections.BeanMap
 -dontwarn java.beans.**
-# GOOGLE
+# ---- GOOGLE
 -dontnote com.google.gson.**
 -dontnote com.google.android.gms.ads.**
 -dontnote com.google.android.**
@@ -178,3 +178,14 @@ public static final ** CREATOR;
     java.lang.Object readResolve();
 }
 
+
+
+
+########### Adcolony
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers class com.adcolony.sdk.ADCNative** {
+    *;
+}
+-dontwarn android.app.Activity
