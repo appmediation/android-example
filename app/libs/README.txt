@@ -1,34 +1,62 @@
-How to create zones and how to integrate ads to your apps you can find in https://appmediation.com/?page_id=48552&preview=true
+How to integrate ads to your apps you can find in http://appmediation.com/android-sdk-documentation/
 
 How to add dependencies to AndroidStudio project you can read here:
-https://appmediation.com/?page_id=48566&preview=true
+https://appmediation.com/?page_id=48566
 
-Below you can find more information on our partners:
+Below you can find information about files and partners that are using this files.
 
-Tapjoy - http://tapjoy.com
+### Appmediation - http://appmediation.com
+am-android-sdk-1.7.0.aar
 
-Mobvista - http://www.mobvista.com
+### Tapjoy - http://tapjoy.com
+tapjoyconnectlibrary-11.12.0.jar
 
-UnityAds - http://unity3d.com/unity/features/ads
+### Mobvista - http://www.mobvista.com
+mobvista-alphab-8.11.2.aar
+mobvista-common-8.11.2.aar
+mobvista-interstitial-8.11.2.aar
+mobvista-interstitialvideo-8.11.2.aar
+mobvista-mvdownloads-8.11.2.aar
+mobvista-mvjscommon-8.11.2.aar
+mobvista-mvnative-8.11.2.aar
+mobvista-nativeex-8.11.2.aar
+mobvista-playercommon-8.11.2.aar
+mobvista-reward-8.11.2.aar
+mobvista-videocommon-8.11.2.aar
+mobvista-videofeeds-8.11.2.aar
+mobvista-videojs-8.11.2.aar
 
-AppLovin - http://www.applovin.com
+### UnityAds - http://unity3d.com/unity/features/ads
+unity-ads-2.2.1.aar
 
-StartApp - http://www.startapp.com
+### AppLovin - http://www.applovin.com
+applovin-sdk-8.0.0.jar
 
-InMobi - http://www.inmobi.com
-InMobi also uses few dependencies that you also have to integrate:
-InMobi dependency (Picasso) - http://square.github.io/picasso
-InMobi dependency (appcompat-v7) - https://developer.android.com/topic/libraries/support-library/packages.html#v7-appcompat
-InMobi dependency (recyclerview-v7) - https://developer.android.com/topic/libraries/support-library/packages.html#v7-recyclerview
+### StartApp - http://www.startapp.com
+StartAppInApp-3.8.4.jar
 
-Chartboost - http://www.chartboost.com
+### InMobi - http://www.inmobi.com
+InMobi-7.1.0.jar
+picasso-2.5.2.jar
 
-Vungle - https://vungle.com
-Vungle dependency (eventbus) - http://greenrobot.org/eventbus
-Vungle dependency (javax.inject) - https://docs.oracle.com/javaee/6/api/javax/inject/package-summary.html
-Vungle dependency (rxjava) - http://reactivex.io
-Vungle dependency (dagger) - http://google.github.io/dagger
+### Chartboost - http://www.chartboost.com
+chartboost-7.2.0.jar
 
-Ogury - http://www.ogury.com
+### Vungle - https://vungle.com
+android-job-1.2.0.jar
+cat-1.0.5.jar
+converter-gson-2.2.0.jar
+fetch-1.1.5.jar
+gson-2.7.jar
+logging-interceptor-3.7.0.jar
+okhttp-3.7.0.jar
+okio-1.12.0.jar
+retrofit-2.2.0.jar
+VNG-moat-mobile-app-kit-2.2.0.jar
+vungle-android-sdk-6.2.5.jar
 
-Adcolony - http://www.adcolony.com
+### Ogury - http://www.ogury.com
+presage-lib-2.2.12.jar
+
+### Adcolony - http://www.adcolony.com
+adcolony-3.3.3.aar

@@ -13,6 +13,7 @@ import com.appmediation.sdk.AMSDK;
 import com.appmediation.sdk.listeners.AMBannerListener;
 import com.appmediation.sdk.listeners.AMListener;
 import com.appmediation.sdk.listeners.AMRewardedListener;
+import com.appmediation.sdk.listeners.GdprDialogListener;
 import com.appmediation.sdk.models.AMError;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -21,7 +22,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AMSDK.init(this, "a1cdd0c4-de3b-421f-a7b3-5c264c16df91");
+        if (savedInstanceState == null) {
+            AMSDK.showGdprNotice(this, new GdprDialogListener() {
+                @Override
+                public void onOptionSelected(boolean gdprConsent) {
+                    AMSDK.init(MainActivity.this, "a1cdd0c4-de3b-421f-a7b3-5c264c16df91");
+                }
+
+                @Override
+                public void onCanceled() {
+
+                }
+            });
+        }
 
         findViewById(R.id.interstitialButton).setOnClickListener(this);
         findViewById(R.id.rewardedVideoButton).setOnClickListener(this);
