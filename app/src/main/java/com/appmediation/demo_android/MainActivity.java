@@ -22,19 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            AMSDK.showGdprNotice(this, new GdprDialogListener() {
-                @Override
-                public void onOptionSelected(boolean gdprConsent) {
-                    AMSDK.init(MainActivity.this, "a1cdd0c4-de3b-421f-a7b3-5c264c16df91");
-                }
-
-                @Override
-                public void onCanceled() {
-
-                }
-            });
-        }
+        AMSDK.init(MainActivity.this, "a1cdd0c4-de3b-421f-a7b3-5c264c16df91");
 
         findViewById(R.id.interstitialButton).setOnClickListener(this);
         findViewById(R.id.rewardedVideoButton).setOnClickListener(this);

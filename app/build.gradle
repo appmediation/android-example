@@ -1,30 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        release {
-            keyAlias 'key0'
-            keyPassword '123456'
-            storeFile file('../dummy.jks')
-            storePassword '000000'
-        }
-    }
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.appmediation.demoandroid"
+        applicationId "com.appm.testandroid"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 
@@ -41,23 +31,20 @@ repositories {
 
 dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:support-vector-drawable:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
-
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
 
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.google.android.gms:play-services-ads:11.8.0'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation (name:'am-android-sdk-1.7.0', ext:'aar')
+    implementation (name:'adcolony-3.3.3', ext:'aar')
+    implementation (name:'am-android-sdk-1.11.4', ext:'aar')
+    implementation (name:'AudienceNetwork-4.28.2', ext:'aar')
     implementation (name:'mobvista-alphab-8.11.2', ext:'aar')
     implementation (name:'mobvista-common-8.11.2', ext:'aar')
     implementation (name:'mobvista-interstitial-8.11.2', ext:'aar')
+    implementation (name:'mobvista-interstitialvideo-8.11.2', ext:'aar')
     implementation (name:'mobvista-mvdownloads-8.11.2', ext:'aar')
     implementation (name:'mobvista-mvjscommon-8.11.2', ext:'aar')
     implementation (name:'mobvista-mvnative-8.11.2', ext:'aar')
@@ -66,8 +53,9 @@ dependencies {
     implementation (name:'mobvista-reward-8.11.2', ext:'aar')
     implementation (name:'mobvista-videocommon-8.11.2', ext:'aar')
     implementation (name:'mobvista-videofeeds-8.11.2', ext:'aar')
+    implementation (name:'mobvista-videojs-8.11.2', ext:'aar')
+    implementation (name:'mytarget-sdk-5.1.2', ext:'aar')
     implementation (name:'unity-ads-2.2.1', ext:'aar')
 
 
-    implementation 'com.android.support:multidex:1.0.3'
 }
