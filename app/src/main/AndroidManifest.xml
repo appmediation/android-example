@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,27 +18,34 @@
             </intent-filter>
         </activity>
 
-        <!-- appmediation and partners -->
+        <!-- Appmediation -->
+        <!-- Mobvista -->
+        <receiver android:name="com.mintegral.msdk.click.AppReceiver"
+            android:enabled="@bool/isLessThenApi28" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
         <!-- StatApp -->
-        <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+        <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <!-- Ogury -->
-        <receiver android:name="io.presage.receiver.NetworkChangeReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-                <action android:name="io.presage.receiver.NetworkChangeReceiver.ONDESTROY" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="io.presage.receiver.AlarmReceiver" />
+
+        <!-- BAIDU -->
+        <meta-data
+            android:name="app_license"
+            android:value="your_baidu_license" />
+
         <provider
-            android:name="io.presage.provider.PresageProvider"
-            android:authorities="${applicationId}.PresageProvider"
-            android:enabled="true"
-            android:exported="true" />
+            android:name="com.duapps.ad.stats.DuAdCacheProvider"
+            android:authorities="${applicationId}.DuAdCacheProvider"
+            android:exported="false"
+            android:enabled="@bool/isLessThenApi28" />
+        <!-- Appmediation -->
     </application>
 
 </manifest>
