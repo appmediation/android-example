@@ -6,6 +6,6 @@
 >
 >
 >
->You can directly download the library [here.](https://storage.googleapis.com/appmediation-sdk/appmediation-android.zip)
+>You can directly download the library [here.](https://storage.googleapis.com/appmediation-sdk/Android/appmediation-android-2.zip)
 >
->More information on how to setup the SDK can be found [here.](https://appmediation.com/android-sdk-documentation)
+>More information on how to setup the SDK can be found [here.](https://github.com/appmediation/Documentation/wiki/Android-Integration)
